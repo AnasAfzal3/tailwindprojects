@@ -1,282 +1,737 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <link rel="stylesheet" href="style.css">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+     
+    
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Gym Trainer</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    
-        
-</head>
-<body class="bg-black text-white ">
-    
+     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/owl.carousel.css" />
+    <link rel="stylesheet" href="css/owl.theme.default.css" />
+  </head>
+  <body class="bg-black text-white">
     <!-- Header section -->
-    <header class="container mx-auto p-4 max-w-[1273px] mt-1 grid grid-cols-2 md:bg-[url('./images/background.png')] sm:bg-[url('./images/background.png')] bg-cover bg-[url('./images/hero.png')] bg-center h-[660px]">
-        <div class="logo md:pl-20 hidden md:block">
-            <h1 class="md:text-4xl text-white text-3xl">Gym<span class="text-[#FAFF00]">24</span></h1>
-        </div>
-        
-        <!-- Navbar -->
-        <nav class="md:ml-auto mb-10 md:mt-2 flex justify-between items-center md:mr-[73px] sm-[73px]">
-            <div class="flex items-center md:hidden">
-                <button id="menu-button" class="text-white focus:outline-none">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
-                    </svg>
-                </button>
-            </div>
-            <div class="hidden md:flex md:space-x-4 space-x-2">
-                <a href="#" class="nav-link text-white">Advantages</a>
-                <a href="#" class="nav-link text-white">Membership</a>
-                <a href="#" class="nav-link text-white">About</a>
-                <a href="#" class="nav-link text-white">Trainers</a>
-            </div>
-        </nav>
+    <header
+      class="container mx-auto p-4 max-w-[1273px] mt-1 grid grid-cols-2 md:bg-[url('./images/background.png')] sm:bg-[url('./images/background.png')] bg-cover bg-[url('./images/hero.png')] bg-center h-[660px]"
+    >
+      <div class="logo md:pl-20 hidden md:block">
+        <h1 class="md:text-4xl text-white text-3xl">
+          Gym<span class="text-[#FAFF00]">24</span>
+        </h1>
+      </div>
 
-        <!-- Sidebar -->
-        <div id="sidebar" class="fixed inset-0 bg-black bg-opacity-80 hidden z-50 md:hidden" onclick="toggleMenu()">
-            <div class="flex flex-col items-center justify-center h-full">
-                <div class="flex justify-end w-full p-4">
-                    <button id="close-button" class="text-white">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-                        </svg>
-                    </button>
-                </div>
-                <div class="text-center mb-8">
-                    <h1 class="text-4xl text-white">Gym<span class="text-[#FAFF00]">24</span></h1>
-                </div>
-                <a href="#" class="nav-link text-white text-2xl py-4">Advantages</a>
-                <a href="#" class="nav-link text-white text-2xl py-4">Membership</a>
-                <a href="#" class="nav-link text-white text-2xl py-4">About</a>
-                <a href="#" class="nav-link text-white text-2xl py-4">Trainers</a>
-            </div>
+      <!-- Navbar -->
+      <nav
+        class="md:ml-auto mb-10 md:mt-2 flex justify-between items-center md:mr-[73px] sm-[73px]"
+      >
+        <div class="flex items-center md:hidden">
+          <button id="menu-button" class="text-white focus:outline-none">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-8 w-8"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16m-7 6h7"
+              />
+            </svg>
+          </button>
         </div>
+        <div class="hidden md:flex md:space-x-4 space-x-2">
+          <a href="#" class="nav-link text-white">Advantages</a>
+          <a href="#" class="nav-link text-white">Membership</a>
+          <a href="#" class="nav-link text-white">About</a>
+          <a href="#" class="nav-link text-white">Trainers</a>
+        </div>
+      </nav>
 
-        <div class="hero-content col-span-full grid sm:md:grid-cols-2 md:grid-cols-2 mb-[300px]">
-            <div class="md:left-text text-white md:mt-[150px] md:ml-20 sm:pt-[300px] md:pt-0 sm:text-left text-center mt-20">
-                <h1 class="text-6xl sm:text-7xl md:text-7xl mb-10 font-bold md:text-left sm:text-left text-center">Free trial session with a trainer</h1>
-                <button class="bg-[#FAFF00] px-10 py-3 text-black rounded-full font-bold sm :text-center md:text-left">Detailed</button>
-            </div>
+      <!-- Sidebar -->
+      <div
+        id="sidebar"
+        class="fixed inset-0 bg-black bg-opacity-80 hidden z-50 md:hidden"
+        onclick="toggleMenu()"
+      >
+        <div class="flex flex-col items-center justify-center h-full">
+          <div class="flex justify-end w-full p-4">
+            <button id="close-button" class="text-white">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-8 w-8"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M6 18L18 6M6 6l12 12"
+                />
+              </svg>
+            </button>
+          </div>
+          <div class="text-center mb-8">
+            <h1 class="text-4xl text-white">
+              Gym<span class="text-[#FAFF00]">24</span>
+            </h1>
+          </div>
+          <a href="#" class="nav-link text-white text-2xl py-4">Advantages</a>
+          <a href="#" class="nav-link text-white text-2xl py-4">Membership</a>
+          <a href="#" class="nav-link text-white text-2xl py-4">About</a>
+          <a href="#" class="nav-link text-white text-2xl py-4">Trainers</a>
         </div>
+      </div>
+
+      <div
+        class="hero-content col-span-full grid sm:md:grid-cols-2 md:grid-cols-2 mb-[300px]"
+      >
+        <div
+          class="md:left-text text-white md:mt-[150px] md:ml-20 sm:pt-[300px] md:pt-0 sm:text-left text-center mt-20"
+        >
+          <h1
+            class="text-6xl sm:text-7xl md:text-7xl mb-10 font-bold md:text-left sm:text-left text-center"
+          >
+            Free trial session with a trainer
+          </h1>
+          <button
+            class="bg-[#FAFF00] px-10 py-3 text-black rounded-full font-bold sm :text-center md:text-left"
+          >
+            Detailed
+          </button>
+        </div>
+      </div>
     </header>
     <section class="mx-auto p-4 container max-w-[1273px] mt-10">
-        <h2 class="text-4xl font-bold text-white text-5xl md:ml-20 text-center md:text-left m-10">Reasons to Join</h2>
-        <div class="grid md:grid-cols-2">
-            <div class="icons-group flex gap-4 mt-20 md:pl-20">
-                <div class="icon-image mt-2">
-                    <img src="/images/icon_line.png" alt="Icon 1">
-                </div>
-                <div class="icon-text">
-                    <h1 class="font-bold">15000 sq.m.</h1>
-                    <p>A spacious gym for sports – <br/>a safe distance between exercise machines</p>
-                </div>
+      <h2
+        class="text-4xl font-bold text-white text-5xl md:ml-20 text-center md:text-left m-10"
+      >
+        Reasons to Join
+      </h2>
+      <div class="grid md:grid-cols-2">
+        <div class="icons-group flex gap-4 mt-20 md:pl-20">
+          <div class="icon-image mt-2">
+            <img src="/images/icon_line.png" alt="Icon 1" />
+          </div>
+          <div class="icon-text">
+            <h1 class="font-bold">15000 sq.m.</h1>
+            <p>
+              A spacious gym for sports – <br />a safe distance between exercise
+              machines
+            </p>
+          </div>
+        </div>
+        <div class="icons-group flex gap-4 mt-20 md:pl-20">
+          <div class="icon-image mt-2">
+            <img src="images/icon_ eqipment.png" alt="Icon 2" />
+          </div>
+          <div class="icon-text">
+            <h1 class="font-bold">More than 200 equipment</h1>
+            <p>
+              No queues at the simulators. Premium equipment <br />from
+              LifeStyle, Hammer Strength, TechnoGym.
+            </p>
+          </div>
+        </div>
+        <div class="icons-group flex gap-4 mt-20 md:pl-20">
+          <div class="icon-image mt-2">
+            <img src="images/icon_ fitness zones.png" alt="Icon 3" />
+          </div>
+          <div class="icon-text">
+            <h1 class="font-bold">4 fitness zones</h1>
+            <p>
+              From cardio to functional and cycle. Separate area<br />
+              for boxing and mixed martial arts
+            </p>
+          </div>
+        </div>
+        <div class="icons-group flex gap-4 mt-20 md:pl-20">
+          <div class="icon-image mt-2">
+            <img src="images/icon_time.png" alt="Icon 4" />
+          </div>
+          <div class="icon-text">
+            <h1 class="font-bold">Round-the-clock operation</h1>
+            <p>
+              The gym is open 24 hours a day, also works on all<br />
+              holidays and weekends
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section
+      class="mx-auto md:p-6 container max-w-[1273px] mt-20 gym-membership-section"
+    >
+      <h1 class="text-center text-4xl mb-8 font-bold font-['MyFont']">
+        Gym Membership
+      </h1>
+      <div class="table-section mb-20 mt-[122px]">
+        <div
+          class="grid md:grid-cols-3 sm:grid-cols-2 md:gap-4 sm:gap-4 justify-center"
+        >
+          <!-- Table Card -->
+          <div
+            class="table-card bg-[#222222] rounded-xl mx-auto w-[320px] flex flex-col justify-between h-[450px] mt-5"
+          >
+            <div
+              class="table-header text-center border-b-4 border-[#000000] mb-5 font-bold mt-8"
+            >
+              <h1 class="text-2xl">Pass ‘Trial’</h1>
+              <h1 class="text-2xl mb-8">$0</h1>
             </div>
-            <div class="icons-group flex gap-4 mt-20 md:pl-20">
-                <div class="icon-image mt-2">
-                    <img src="images/icon_ eqipment.png" alt="Icon 2">
-                </div>
-                <div class="icon-text">
-                    <h1 class="font-bold">More than 200 equipment</h1>
-                    <p>No queues at the simulators. Premium equipment <br/>from LifeStyle, Hammer Strength, TechnoGym.</p>
-                </div>
+            <div class="table-body mx-auto w-full">
+              <div class="list-items w-[220px] mx-auto">
+                <ul class="list-none space-y-3">
+                  <li class="flex items-center gap-2">
+                    <img src="images/list-check.png" alt="Check Icon" />
+                    Access to the gym from 8:00 to 14:00
+                  </li>
+                  <li class="flex items-center gap-2">
+                    <img src="images/list-check.png" alt="Check Icon" />
+                    The trainer on duty will introduce you to the gym
+                  </li>
+                </ul>
+              </div>
             </div>
-            <div class="icons-group flex gap-4 mt-20 md:pl-20">
-                <div class="icon-image mt-2">
-                    <img src="images/icon_ fitness zones.png" alt="Icon 3">
-                </div>
-                <div class="icon-text">
-                    <h1 class="font-bold">4 fitness zones</h1>
-                    <p>From cardio to functional and cycle. Separate area<br/> for boxing and mixed martial arts</p>
-                </div>
+            <div class="table-footer text-center mt-auto pb-8">
+              <button
+                class="bg-[#FAFF00] px-[50px] py-[10px] text-black rounded-full text-black font-bold"
+              >
+                Buy
+              </button>
             </div>
-            <div class="icons-group flex gap-4 mt-20 md:pl-20">
-                <div class="icon-image mt-2">
-                    <img src="images/icon_time.png" alt="Icon 4">
-                </div>
-                <div class="icon-text">
-                    <h1 class="font-bold">Round-the-clock operation</h1>
-                    <p>The gym is open 24 hours a day, also works on all<br/> holidays and weekends</p>
-                </div>
+          </div>
+          <!-- Repeat Cards -->
+          <div
+            class="table-card bg-[#222222] rounded-xl mx-auto w-[320px] flex flex-col justify-between h-[450px] mt-5"
+          >
+            <div
+              class="table-header text-center border-b-4 border-[#000000] mb-5 font-bold mt-8"
+            >
+              <h1 class="text-2xl">Pass ‘Standard’</h1>
+              <h1 class="text-2xl mb-8">$20</h1>
             </div>
+            <div class="table-body mx-auto w-full">
+              <div class="list-items w-[220px] mx-auto">
+                <ul class="list-none space-y-3">
+                  <li class="flex items-center gap-2">
+                    <img src="images/list-check.png" alt="Check Icon" />
+                    Visit without restrictions 24/7
+                  </li>
+                  <li class="flex items-center gap-2">
+                    <img src="images/list-check.png" alt="Check Icon" />
+                    Individual training program
+                  </li>
+                  <li class="flex items-center gap-2">
+                    <img src="images/list-check.png" alt="Check Icon" />
+                    Access to the VTRAINER application
+                  </li>
+                  <li class="flex items-center gap-2">
+                    <img src="images/list-check.png" alt="Check Icon" />
+                    Trainer support
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="table-footer text-center mt-auto pb-8">
+              <button
+                class="bg-[#FAFF00] px-[50px] py-[10px] text-black rounded-full text-black font-bold"
+              >
+                Buy
+              </button>
+            </div>
+          </div>
+          <!-- Third Card -->
+          <div
+            class="table-card bg-[#222222] rounded-xl mx-auto w-[320px] flex flex-col justify-between h-[450px] mt-5"
+          >
+            <div
+              class="table-header text-center border-b-4 border-[#000000] mb-5 font-bold mt-8"
+            >
+              <h1 class="text-2xl">Pass ‘Premium’</h1>
+              <h1 class="text-2xl mb-8">$50</h1>
+            </div>
+            <div class="table-body mx-auto w-full">
+              <div class="list-items w-[220px] mx-auto">
+                <ul class="list-none space-y-3">
+                  <li class="flex items-center gap-2">
+                    <img src="images/list-check.png" alt="Check Icon" />
+                    The entrance time to the gym is from 14:00 to 16:00
+                  </li>
+                  <li class="flex items-center gap-2">
+                    <img src="images/list-check.png" alt="Check Icon" />
+                    Without suspension of gym membership
+                  </li>
+                  <li class="flex items-center gap-2">
+                    <img src="images/list-check.png" alt="Check Icon" />
+                    The trainer on duty will introduce you to the gym
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="table-footer text-center mt-auto pb-8">
+              <button
+                class="bg-[#FAFF00] px-[50px] py-[10px] text-black rounded-full text-black font-bold"
+              >
+                Buy
+              </button>
+            </div>
+          </div>
+          <div
+            class="table-card bg-[#222222] rounded-xl mx-auto w-[320px] flex flex-col justify-between h-[450px] mt-5"
+          >
+            <div
+              class="table-header text-center border-b-4 border-[#000000] mb-5 font-bold mt-8"
+            >
+              <h1 class="text-2xl">Pass ‘1 Month 24/7’</h1>
+              <h1 class="text-2xl mb-8">$85</h1>
+            </div>
+            <div class="table-body mx-auto w-full">
+              <div class="list-items w-[220px] mx-auto">
+                <ul class="list-none space-y-3">
+                  <li class="flex items-center gap-2">
+                    <img src="images/list-check.png" alt="Check Icon" />
+                    Visit without restrictions 24/7
+                  </li>
+                  <li class="flex items-center gap-2">
+                    <img src="images/list-check.png" alt="Check Icon" />
+                    The trainer on duty will introduce you to the gym
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="table-footer text-center mt-auto pb-8">
+              <button
+                class="bg-[#FAFF00] px-[50px] py-[10px] text-black rounded-full text-black font-bold"
+              >
+                Buy
+              </button>
+            </div>
+          </div>
+          <div
+            class="table-card bg-[#222222] rounded-xl mx-auto w-[320px] flex flex-col justify-between h-[450px] mt-5"
+          >
+            <div
+              class="table-header text-center border-b-4 border-[#000000] mb-5 font-bold mt-8"
+            >
+              <h1 class="text-2xl">Pass ‘In Shape (AM)’</h1>
+              <h1 class="text-2xl mb-8">$165</h1>
+            </div>
+            <div class="table-body mx-auto w-full">
+              <div class="list-items w-[220px] mx-auto">
+                <ul class="list-none space-y-3">
+                  <li class="flex items-center gap-2">
+                    <img src="images/list-check.png" alt="Check Icon" />
+                    Training in mini-groups until 14:00
+                  </li>
+                  <li class="flex items-center gap-2">
+                    <img src="images/list-check.png" alt="Check Icon" />
+                    Without suspension of gym membership
+                  </li>
+                  <li class="flex items-center gap-2">
+                    <img src="images/list-check.png" alt="Check Icon" />
+                    Classes with a trainer in a mini-group 3 times a week
+                  </li>
+                  <li class="flex items-center gap-2">
+                    <img src="images/list-check.png" alt="Check Icon" />
+                    Trainer support
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="table-footer text-center mt-auto pb-8">
+              <button
+                class="bg-[#FAFF00] px-[50px] py-[10px] text-black rounded-full text-black font-bold"
+              >
+                Buy
+              </button>
+            </div>
+          </div>
+          <div
+            class="table-card bg-[#222222] rounded-xl mx-auto w-[320px] flex flex-col justify-between h-[450px] mt-5"
+          >
+            <div
+              class="table-header text-center border-b-4 border-[#000000] mb-5 font-bold mt-8"
+            >
+              <h1 class="text-2xl">Pass ‘In Shape (PM)’</h1>
+              <h1 class="text-2xl mb-8">$195</h1>
+            </div>
+            <div class="table-body mx-auto w-full">
+              <div class="list-items w-[220px] mx-auto">
+                <ul class="list-none space-y-3">
+                  <li class="flex items-center gap-2">
+                    <img src="images/list-check.png" alt="Check Icon" />
+                    Training in mini-groups until 17:00
+                  </li>
+                  <li class="flex items-center gap-2">
+                    <img src="images/list-check.png" alt="Check Icon" />
+                    Without suspension of gym membership
+                  </li>
+                  <li class="flex items-center gap-2">
+                    <img src="images/list-check.png" alt="Check Icon" />
+                    Classes with a trainer in a mini-group 3 times a week
+                  </li>
+                  <li class="flex items-center gap-2">
+                    <img src="images/list-check.png" alt="Check Icon" />
+                    Trainer support
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="table-footer text-center mt-auto pb-8">
+              <button
+                class="bg-[#FAFF00] px-[50px] py-[10px] text-black rounded-full text-black font-bold"
+              >
+                Buy
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="about-us mx-auto p-6 container max-w-[1273px] mt-20">
+      <div class="md:grid grid-cols-2">
+        <div
+          class="col-left-text md:w-[430px] mb-5 md:text-left sm:text-left text-center"
+        >
+          <h1 class="md:text-5xl font-bold font-family-['myfont']">About us</h1>
+          <div class="innder-text text-1xl">
+            <p class="mt-5 mb-5">
+              Gym24 is a leading fitness center located near Grushevka metro
+              station, offering over 1500 sq. m of space dedicated to
+              top-of-the-line workout equipment from leading brands such as
+              Hammer Strength, Life Fitness, and TechnoGym.
+            </p>
+            <p class="mb-5">
+              With affordable membership options, Gym24 is accessible to
+              everyone who wants to reach their fitness goals, whether it's
+              building strength, increasing endurance, or losing weight.
+            </p>
+
+            <p>
+              Certified trainers at Gym24 provide expert guidance and support to
+              develop personalized workout plans tailored to each individual's
+              needs and goals.
+            </p>
+          </div>
+        </div>
+        <div class="about-slider">
+          <div class="owl-carousel owl-theme owl-loaded">
+            <div class="owl-stage-outer">
+              <div class="owl-stage">
+                <div class="owl-item"><img src="images/slider1.png" /></div>
+                <div class="owl-item"><img src="images/slider1.png" /></div>
+                <div class="owl-item"><img src="images/slider1.png" /></div>
+                <div class="owl-item"><img src="images/slider1.png" /></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="Trainers-staff mx-auto p-6 container max-w-[1273px] mt-20">
+      <h1 class="text-white text-center text-5xl text-bold font-['MyFont'] mb-20">Trainers staff</h1>
+      <div class="grid md:grid-cols-4 sm:grid-col-2 m-5">
+        <div class="max-w-xs mx-auto bg-[#222222] text-white rounded-lg shadow-lg overflow-hidden w-[275px] h-[448px] mt-5 mb-5">
+          <!-- Image Section -->
+          <div class="relative p-4">
+            <img
+              src="images/team1.png"
+              alt="Trainer Image"
+              class="w-full object-cover rounded-lg"
+            />
+          </div>
+          <!-- Content Section -->
+          <div class="text-center bg-[#222222]">
+            <h3 class="text-lg font-bold">Victoria Shurpik</h3>
+            <div class="flex justify-center mt-3 space-x-3">
+              <!-- Social Media Icons -->
+              <a href="#" class="text-white hover:text-gray-400">
+               <img src="images/inst.png"/>
+              </a>
+              <a href="#" class="text-white hover:text-gray-400">
+                <img src="images/twitter1.png"/>
+              </a>
+              <a href="#" class="text-white hover:text-gray-400">
+                <img src="images/twitter.png"/>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="max-w-xs mx-auto bg-[#222222] text-white rounded-lg shadow-lg overflow-hidden w-[275px] h-[448px] mt-5 mb-5">
+          <!-- Image Section -->
+          <div class="relative p-4">
+            <img
+              src="images/team2.png"
+              alt="Trainer Image"
+              class="w-full object-cover rounded-lg"
+            />
+          </div>
+          <!-- Content Section -->
+          <div class="text-center bg-[#222222]">
+            <h3 class="text-lg font-bold">Elizabeth Lavrinenko</h3>
+            <div class="flex justify-center mt-3 space-x-3">
+              <!-- Social Media Icons -->
+              <a href="#" class="text-white hover:text-gray-400">
+               <img src="images/inst.png"/>
+              </a>
+              <a href="#" class="text-white hover:text-gray-400">
+                <img src="images/twitter1.png"/>
+              </a>
+              <a href="#" class="text-white hover:text-gray-400">
+                <img src="images/twitter.png"/>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="max-w-xs mx-auto bg-[#222222] text-white rounded-lg shadow-lg overflow-hidden w-[275px] h-[448px] mt-5 mb-5 ">
+          <!-- Image Section -->
+          <div class="relative p-4">
+            <img
+              src="images/team3.png"
+              alt="Trainer Image"
+              class="w-full object-cover rounded-lg"
+            />
+          </div>
+          <!-- Content Section -->
+          <div class="text-center bg-[#222222]">
+            <h3 class="text-lg font-bold">Ivan Gladkikh</h3>
+            <div class="flex justify-center mt-3 space-x-3">
+              <!-- Social Media Icons -->
+              <a href="#" class="text-white hover:text-gray-400">
+               <img src="images/inst.png"/>
+              </a>
+              <a href="#" class="text-white hover:text-gray-400">
+                <img src="images/twitter1.png"/>
+              </a>
+              <a href="#" class="text-white hover:text-gray-400">
+                <img src="images/twitter.png"/>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="max-w-xs mx-auto bg-[#222222] text-white rounded-lg shadow-lg overflow-hidden w-[275px] h-[448px]  mt-5 mb-5 ">
+          <!-- Image Section -->
+          <div class="relative p-4">
+            <img
+              src="images/team4.png"
+              alt="Trainer Image"
+              class="w-full object-cover rounded-lg"
+            />
+          </div>
+          <!-- Content Section -->
+          <div class="text-center bg-[#222222]">
+            <h3 class="text-lg font-bold">Lyudmila Sabilo</h3>
+            <div class="flex justify-center mt-3 space-x-3">
+              <!-- Social Media Icons -->
+              <a href="#" class="text-white hover:text-gray-400">
+               <img src="images/inst.png"/>
+              </a>
+              <a href="#" class="text-white hover:text-gray-400">
+                <img src="images/twitter1.png"/>
+              </a>
+              <a href="#" class="text-white hover:text-gray-400">
+                <img src="images/twitter.png"/>
+              </a>
+            </div>
+          </div>
+        
+        </div>
+        <div class="max-w-xs mx-auto bg-[#222222] text-white rounded-lg shadow-lg overflow-hidden w-[275px] h-[448px] mb-5">
+          <!-- Image Section -->
+          <div class="relative p-4">
+            <img
+              src="images/team.5.png"
+              alt="Trainer Image"
+              class="w-full object-cover rounded-lg"
+            />
+          </div>
+          <!-- Content Section -->
+          <div class="text-center bg-[#222222]">
+            <h3 class="text-lg font-bold">Evgeny Gurkov</h3>
+            <div class="flex justify-center mt-3 space-x-3">
+              <!-- Social Media Icons -->
+              <a href="#" class="text-white hover:text-gray-400">
+               <img src="images/inst.png"/>
+              </a>
+              <a href="#" class="text-white hover:text-gray-400">
+                <img src="images/twitter1.png"/>
+              </a>
+              <a href="#" class="text-white hover:text-gray-400">
+                <img src="images/twitter.png"/>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="max-w-xs mx-auto bg-[#222222] text-white rounded-lg shadow-lg overflow-hidden w-[275px] h-[448px] mb-5 ">
+          <!-- Image Section -->
+          <div class="relative p-4">
+            <img
+              src="images/team6.png"
+              alt="Trainer Image"
+              class="w-full object-cover rounded-lg"
+            />
+          </div>
+          <!-- Content Section -->
+          <div class="text-center bg-[#222222]">
+            <h3 class="text-lg font-bold">Anatoly Prytytsky</h3>
+            <div class="flex justify-center mt-3 space-x-3">
+              <!-- Social Media Icons -->
+              <a href="#" class="text-white hover:text-gray-400">
+               <img src="images/inst.png"/>
+              </a>
+              <a href="#" class="text-white hover:text-gray-400">
+                <img src="images/twitter1.png"/>
+              </a>
+              <a href="#" class="text-white hover:text-gray-400">
+                <img src="images/twitter.png"/>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="max-w-xs mx-auto bg-[#222222] text-white rounded-lg shadow-lg overflow-hidden w-[275px] h-[448px] mb-5 ">
+          <!-- Image Section -->
+          <div class="relative p-4">
+            <img
+              src="images/team7.png"
+              alt="Trainer Image"
+              class="w-full object-cover rounded-lg"
+            />
+          </div>
+          <!-- Content Section -->
+          <div class="text-center bg-[#222222]">
+            <h3 class="text-lg font-bold">Victor Ludkovich</h3>
+            <div class="flex justify-center mt-3 space-x-3">
+              <!-- Social Media Icons -->
+              <a href="#" class="text-white hover:text-gray-400">
+               <img src="images/inst.png"/>
+              </a>
+              <a href="#" class="text-white hover:text-gray-400">
+                <img src="images/twitter1.png"/>
+              </a>
+              <a href="#" class="text-white hover:text-gray-400">
+                <img src="images/twitter.png"/>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="max-w-xs mx-auto bg-[#222222] text-white rounded-lg shadow-lg overflow-hidden w-[275px] h-[448px] ">
+          <!-- Image Section -->
+          <div class="relative p-4">
+            <img
+              src="images/team8.png"
+              alt="Trainer Image"
+              class="w-full object-cover rounded-lg"
+            />
+          </div>
+          <!-- Content Section -->
+          <div class="text-center bg-[#222222]">
+            <h3 class="text-lg font-bold">Maria Masyak</h3>
+            <div class="flex justify-center mt-3 space-x-3">
+              <!-- Social Media Icons -->
+              <a href="#" class="text-white hover:text-gray-400">
+               <img src="images/inst.png"/>
+              </a>
+              <a href="#" class="text-white hover:text-gray-400">
+                <img src="images/twitter1.png"/>
+              </a>
+              <a href="#" class="text-white hover:text-gray-400">
+                <img src="images/twitter.png"/>
+              </a>
+            </div>
+          </div>
         </div>
     </section>
-     
-   <section class="mx-auto md:p-6 container max-w-[1273px] mt-20 gym-membership-section">
-  <h1 class="text-center text-4xl mb-8 font-bold font-['MyFont']">Gym Membership</h1>
-  <div class="table-section mb-20 mt-[122px]">
-    <div class="grid md:grid-cols-3 sm:grid-cols-2 md:gap-4 sm:gap-4 justify-center">
-      <!-- Table Card -->
-      <div class="table-card bg-[#222222] rounded-xl mx-auto w-[320px] flex flex-col justify-between  h-[450px] mt-5 ">
-        <div class="table-header text-center border-b-4 border-[#000000] mb-5 font-bold mt-8">
-          <h1 class="text-2xl">Pass ‘Trial’</h1>
-          <h1 class="text-2xl mb-8">$0</h1>
+   <section class="footer-section mx-auto p-4 container max-w-[1273px] mt-20">
+   <footer>
+    <div class="grid md:grid-cols-3">
+      <div class="col-1 w-[250px] m-10 ">
+        <div class="logo mb-5">
+          <h1 class="md:text-4xl text-white text-3xl">
+            Gym<span class="text-[#FAFF00]">24</span>
+          </h1>
         </div>
-        <div class="table-body mx-auto w-full">
-          <div class="list-items w-[220px] mx-auto">
-            <ul class="list-none space-y-3">
-              <li class="flex items-center gap-2">
-                <img src="images/list-check.png" alt="Check Icon" />
-                Access to the gym from 8:00 to 14:00
-              </li>
-              <li class="flex items-center gap-2">
-                <img src="images/list-check.png" alt="Check Icon" />
-                The trainer on duty will introduce you to the gym
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div class="table-footer text-center mt-auto pb-8">
-          <button class="bg-[#FAFF00] px-[50px] py-[10px] text-black rounded-full text-black font-bold">Buy</button>
+        <div class="paragraph">
+          Build strength and confidence at our gym with state-of-the-art equipment, personalized training, and a motivating community
         </div>
       </div>
-      <!-- Repeat Cards -->
-      <div class="table-card bg-[#222222] rounded-xl mx-auto w-[320px] flex flex-col justify-between  h-[450px] mt-5">
-        <div class="table-header text-center border-b-4 border-[#000000] mb-5 font-bold mt-8">
-          <h1 class="text-2xl">Pass ‘Standard’</h1>
-          <h1 class="text-2xl mb-8">$20</h1>
+      <div class="col-1 w-[250px] m-10 ">
+        <div class="logo mb-5">
+          <h1 class="text-white text-lg font-bold">
+            Address
+          </h1>
         </div>
-        <div class="table-body mx-auto w-full">
-          <div class="list-items w-[220px] mx-auto">
-            <ul class="list-none space-y-3">
-              <li class="flex items-center gap-2">
-                <img src="images/list-check.png" alt="Check Icon" />
-                Access to the gym 24/7
-              </li>
-              <li class="flex items-center gap-2">
-                <img src="images/list-check.png" alt="Check Icon" />
-                Free group classes
-              </li>
-              <li class="flex items-center gap-2">
-                <img src="images/list-check.png" alt="Check Icon" />
-                Personal trainer support
-              </li>
-            </ul>
-          </div>
+        <div class="paragraph">
+          Republic of Belarus
+          Minsk city
+          Dzerzhinsky Avenue 15
         </div>
-        <div class="table-footer text-center mt-auto pb-8">
-            <button class="bg-[#FAFF00] px-[50px] py-[10px] text-black rounded-full text-black font-bold">Buy</button>
-          </div>
       </div>
-      <!-- Third Card -->
-      <div class="table-card bg-[#222222] rounded-xl mx-auto w-[320px] flex flex-col justify-between  h-[450px] mt-5">
-        <div class="table-header text-center border-b-4 border-[#000000] mb-5 font-bold mt-8">
-          <h1 class="text-2xl">Pass ‘Premium’</h1>
-          <h1 class="text-2xl mb-8">$50</h1>
+      <div class="col-1 w-[250px] m-10 ">
+        <div class="logo mb-5">
+          <h1 class="md:text-lg text-white font-bold">
+            Contact
+          </h1>
         </div>
-        <div class="table-body mx-auto w-full">
-          <div class="list-items w-[220px] mx-auto">
-            <ul class="list-none space-y-3">
-              <li class="flex items-center gap-2">
-                <img src="images/list-check.png" alt="Check Icon" />
-                Personal trainer sessions
-              </li>
-              <li class="flex items-center gap-2">
-                <img src="images/list-check.png" alt="Check Icon" />
-                Exclusive equipment access
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div class="table-footer text-center mt-auto pb-8">
-            <button class="bg-[#FAFF00] px-[50px] py-[10px] text-black rounded-full text-black font-bold">Buy</button>
-          </div>
-      </div>
-      <div class="table-card bg-[#222222] rounded-xl mx-auto w-[320px] flex flex-col justify-between  h-[450px] mt-5">
-        <div class="table-header text-center border-b-4 border-[#000000] mb-5 font-bold mt-8">
-          <h1 class="text-2xl">Pass ‘1 Month 24/7’ </h1>
-          <h1 class="text-2xl mb-8">$85</h1>
-        </div>
-        <div class="table-body mx-auto w-full">
-          <div class="list-items w-[220px] mx-auto">
-            <ul class="list-none space-y-3">
-              <li class="flex items-center gap-2">
-                <img src="images/list-check.png" alt="Check Icon" />
-                Personal trainer sessions
-              </li>
-              <li class="flex items-center gap-2">
-                <img src="images/list-check.png" alt="Check Icon" />
-                Exclusive equipment access
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div class="table-footer text-center mt-auto pb-8">
-            <button class="bg-[#FAFF00] px-[50px] py-[10px] text-black rounded-full text-black font-bold">Buy</button>
-          </div>
-      </div>
-      <div class="table-card bg-[#222222] rounded-xl mx-auto w-[320px] flex flex-col justify-between  h-[450px] mt-5">
-        <div class="table-header text-center border-b-4 border-[#000000] mb-5 font-bold mt-8">
-          <h1 class="text-2xl">Pass ‘In Shape (AM)’ </h1>
-          <h1 class="text-2xl mb-8">$165</h1>
-        </div>
-        <div class="table-body mx-auto w-full">
-          <div class="list-items w-[220px] mx-auto">
-            <ul class="list-none space-y-3">
-              <li class="flex items-center gap-2">
-                <img src="images/list-check.png" alt="Check Icon" />
-                Personal trainer sessions
-              </li>
-              <li class="flex items-center gap-2">
-                <img src="images/list-check.png" alt="Check Icon" />
-                Exclusive equipment access
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div class="table-footer text-center mt-auto pb-8">
-            <button class="bg-[#FAFF00] px-[50px] py-[10px] text-black rounded-full text-black font-bold">Buy</button>
-          </div>
-      </div>
-      <div class="table-card bg-[#222222] rounded-xl mx-auto w-[320px] flex flex-col justify-between  h-[450px] mt-5">
-        <div class="table-header text-center border-b-4 border-[#000000] mb-5 font-bold mt-8">
-          <h1 class="text-2xl">Pass ‘In Shape (PM)’ </h1>
-          <h1 class="text-2xl mb-8">$195</h1>
-        </div>
-        <div class="table-body mx-auto w-full">
-          <div class="list-items w-[220px] mx-auto">
-            <ul class="list-none space-y-3">
-              <li class="flex items-center gap-2">
-                <img src="images/list-check.png" alt="Check Icon" />
-                Personal trainer sessions
-              </li>
-              <li class="flex items-center gap-2">
-                <img src="images/list-check.png" alt="Check Icon" />
-                Exclusive equipment access
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div class="table-footer text-center mt-auto pb-8">
-            <button class="bg-[#FAFF00] px-[50px] py-[10px] text-black rounded-full text-black font-bold">Buy</button>
-          </div>
+        <div class="paragraph w-[300px]">
+         
+         <div class="call-icon flex  gap-2 mb-2 items-end"> <img src="images/icon_call.png" alt="" srcset=""/><span class="items-center">+375(44)-777-24-12</span></div>
+         <div class="email-icon flex items-end gap-3 "><img src="images/icon_email.png" alt="" srcset="" /><span class="items-center"> gym24@gmail.com</span></div>
+        
       </div>
     </div>
-  </div>
-  
-</section>
-
-      
-     </section>
+   </footer>
+   </section>
     <script>
-        // JavaScript to handle the menu toggle
-        const menuButton = document.getElementById('menu-button');
-        const sidebar = document.getElementById('sidebar');
-        const closeButton = document.getElementById('close-button');
+      // JavaScript to handle the menu toggle
+      const menuButton = document.getElementById("menu-button");
+      const sidebar = document.getElementById("sidebar");
+      const closeButton = document.getElementById("close-button");
 
-        menuButton.addEventListener('click', () => {
-            sidebar.classList.toggle('hidden');
-        });
+      menuButton.addEventListener("click", () => {
+        sidebar.classList.toggle("hidden");
+      });
 
-        closeButton.addEventListener('click', () => {
-            sidebar.classList.add('hidden');
-        });
+      closeButton.addEventListener("click", () => {
+        sidebar.classList.add("hidden");
+      });
 
-        // Close the sidebar when clicking outside of it
-        function toggleMenu() {
-            sidebar.classList.add('hidden');
-        }
+      // Close the sidebar when clicking outside of it
+      function toggleMenu() {
+        sidebar.classList.add("hidden");
+      }
     </script>
-</body>
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
+    <script src="js/owl.carousel.js"></script>
+    <script>
+      $(".owl-carousel").owlCarousel({
+        loop: true,
+        nav: true,
+
+        responsive: {
+          0: {
+            items: 1,
+          },
+          600: {
+            items: 1,
+          },
+          1000: {
+            items: 1,
+          },
+        },
+      });
+    </script>
+  </body>
 </html>

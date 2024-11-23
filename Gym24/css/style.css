@@ -1,0 +1,57 @@
+@font-face {
+  font-family: "MyFont";
+  src: url("/fonts/MADE\ Outer\ Sans\ Bold\ PERSONAL\ USE.otf")
+    format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+.hero-content{
+    font-family: "MyFont";
+}
+.table-card .table-header{
+  font-family: 'MyFont',serif;
+}
+.about-us h1{
+  font-family: 'MyFont',serif;
+} 
+
+/* Optional: Additional styling for the navbar */
+.nav-link {
+  transition: color 0.3s, background-color 0.3s;
+}
+.nav-link:hover {
+  color: #faff00; /* Change color on hover */
+  background-color: rgba(250, 255, 0, 0.2); /* Light background on hover */
+}
+
+.owl-theme .owl-dots .owl-dot.active span {
+  width: 40px !important;
+  height: 3px !important;
+  background-color:#faff00 !important
+}
+.owl-theme .owl-dots span{
+  width: 40px !important;
+  height: 3px !important;
+ 
+}
+.owl-dots{
+  text-align: left !important;
+  display: flex;
+}
+.owl-theme .owl-nav{
+  height: 18px;
+    text-align: right !important;
+    font-weight: bolder;
+    margin: 0 auto !important;
+}
+.owl-nav button span{
+  font-size: 21px;
+}
+.owl-nav button span:hover{
+ 
+  color: #faff00;
+  background-color: transparent !important;
+}
+.owl-nav button:hover{
+  background-color: transparent !important;
+}
